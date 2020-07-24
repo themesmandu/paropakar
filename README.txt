@@ -1,10 +1,10 @@
 === Paropakar Theme ===
 Contributors: Themesmandu
 Requires at least: WordPress 4.9
-Tested up to: WordPress 5.0.3
+Tested up to: WordPress 5.4.2
 Requires PHP: 5.4
 Stable tag: 4.3
-Version: 1.0.7
+Version: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, left-sidebar, right-sidebar, flexible-header, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education
@@ -110,3 +110,8 @@ Initial release
 == Upgrade Notice ==
 = 1.0 =
 Initial Release
+
+
+== Upgrade Notice ==
+= 1.0.8 =
+Added New Section in Front Page

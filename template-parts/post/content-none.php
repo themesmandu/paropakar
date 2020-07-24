@@ -21,8 +21,8 @@
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 			?>
 
-			<p><?php esc_attr_e( 'Ready to publish your first post?', 'paropakar' ); ?> <a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>">
-				<?php esc_attr_e( 'Get started here', 'paropakar' ); ?>
+			<p><?php esc_html_e( 'Ready to publish your first post?', 'paropakar' ); ?> <a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>">
+				<?php esc_html_e( 'Get started here', 'paropakar' ); ?>
 
 				</a>
 			</p>
@@ -31,7 +31,7 @@
 
 		<?php else : ?>
 
-			<p><?php esc_attr_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'paropakar' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'paropakar' ); ?></p>
 			<?php
 				get_search_form();
 

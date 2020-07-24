@@ -38,7 +38,7 @@ if ( get_theme_mod( 'paropakar_slider_activation' ) === '1' ) :
 						<div class="carousel-caption">
 							<h3 class="heading-top"><?php the_title(); ?></h3> <br>
 							<p><?php the_excerpt(); ?></p>
-							<a href="<?php the_permalink(); ?>" target="_blank"><?php echo esc_attr__( 'Read More', 'paropakar' ); ?></a>
+							<a href="<?php the_permalink(); ?>" target="_blank"><?php echo esc_html__( 'Read More', 'paropakar' ); ?></a>
 						</div>
 					</div>
 					<?php $paropakar_count++; ?>
@@ -145,7 +145,7 @@ if ( class_exists( 'Give' ) ) :
 						echo esc_attr( give_form_display_content( $paropakar_postid, $paropakar_args ) );
 						echo esc_attr( give_show_goal_progress( $paropakar_postid, $paropakar_args ) );
 						?>
-						<a class="donate_link" href = "<?php echo esc_url( get_permalink( $paropakar_postid ) ); ?>" ><?php echo esc_attr__( 'Donate', 'paropakar' ); ?></a>
+						<a class="donate_link" href = "<?php echo esc_url( get_permalink( $paropakar_postid ) ); ?>" ><?php echo esc_html__( 'Donate', 'paropakar' ); ?></a>
 					</div>
 					<?php
 				endwhile;
@@ -156,6 +156,73 @@ if ( class_exists( 'Give' ) ) :
 	</section>
 	<?php
 endif;
+?>
+
+<?php
+/*
+* Team Section
+*/
+?>
+<?php if ( get_theme_mod( 'paropakar_team_activation' ) == 1 ) : ?>
+<section class="section-our-team">
+    <div class="container">
+        <?php
+            $paropakar_team_heading = get_theme_mod( 'paropakar_team_setting_heading' );
+            $paropakar_team_subheading = get_theme_mod( 'paropakar_team_setting_subheading' );
+        ?>
+        <h1><?php echo esc_html( $paropakar_team_heading ); ?></h1>
+        <h2><?php echo esc_html( $paropakar_team_subheading ); ?></h2>
+
+        <div class="row">
+            <?php $paropakar_team_shortcode = get_theme_mod( 'paropakar_team_setting_shortcode' ); ?>
+            <?php echo do_shortcode( $paropakar_team_shortcode ); ?>
+        </div>
+    </div>
+</section>
+<?php endif;
+
+/*
+* Event Section
+*/
+
+if ( get_theme_mod( 'paropakar_event_activation' ) == 1 ) : ?>
+<section class="section-events">
+    <div class="container">
+        <?php
+            $paropakar_event_heading = get_theme_mod( 'paropakar_event_setting_heading' );
+            $paropakar_event_subheading = get_theme_mod( 'paropakar_event_setting_subheading' );
+        ?>
+        <h1><?php echo esc_html( $paropakar_event_heading ); ?></h1>
+        <h2><?php echo esc_html( $paropakar_event_subheading ); ?></h2>
+        <?php
+            $paropakar_event_pages = paropakar_get_pages( 'paropakar_event_setting_' );
+            if( !empty( $paropakar_event_pages ) ) :
+               $paropakar_page_query = new WP_Query(
+                       array(
+                           'post_type' => 'page',
+                           'post__in' => $paropakar_event_pages,
+                       ));
+            endif;
+        ?>
+        <div class="row">
+            <?php
+            while( $paropakar_page_query->have_posts() ):
+                $paropakar_page_query->the_post(); ?>
+                <div class="col-md-4">
+                    <figure>
+                        <?php if( has_post_thumbnail() ): ?>
+                        <img src="<?php echo esc_url( get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
+                        <?php endif; ?>
+                    </figure>
+                    <h3 class="name"><a href="#"><?php the_title(); ?></a></h3>
+                    <p><?php the_excerpt(); ?></p>
+            </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</section>
+<?php endif;
+
 
 /*
 * Donation Section
@@ -175,7 +242,7 @@ if ( ! empty( $paropakar_donation_page ) ) :
 				<div class="col-md-6 col-second">
 					<h1><?php echo wp_kses_post( $paropakar_donation_title ); ?></h1>
 					<p><?php echo wp_kses_post( $paropakar_donation_description ); ?></p>
-					<p><a href="<?php the_permalink( $paropakar_donationid ); ?>" class="btn" target="_blank"><?php echo esc_attr__( 'Donate', 'paropakar' ); ?></a></p>
+					<p><a href="<?php the_permalink( $paropakar_donationid ); ?>" class="btn" target="_blank"><?php echo esc_html__( 'Donate', 'paropakar' ); ?></a></p>
 				</div>
 			</div>
 		</div>
@@ -191,7 +258,7 @@ endif;
 ?>
 <section class="section-six">
 	<div class="container">
-		<h1><?php echo esc_attr__( 'Our blog', 'paropakar' ); ?></h1>
+		<h1><?php echo esc_html__( 'Our blog', 'paropakar' ); ?></h1>
 		<div class="row">
 			<?php
 			// Define our WP Query Parameters.

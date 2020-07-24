@@ -104,13 +104,13 @@
 			$paropakar_donation_btn_name = get_theme_mod( 'paropakar_donation_btn_name' );
 			if ( ! empty( $paropakar_donation_btn_name ) ) :
 				?>
-				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_donation_btn_link' ) ); ?>" class="donate"><?php echo esc_attr( get_theme_mod( 'paropakar_donation_btn_name' ) ); ?></a>
+				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_donation_btn_link' ) ); ?>" class="donate"><?php echo esc_html( get_theme_mod( 'paropakar_donation_btn_name' ) ); ?></a>
 			<?php endif; ?>
 			<?php
 			$paropakar_volunteer_btn_name = get_theme_mod( 'paropakar_volunteer_btn_name' );
 			if ( ! empty( $paropakar_volunteer_btn_name ) ) :
 				?>
-				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_volunteer_btn_link' ) ); ?>" class="volunteer"><?php echo esc_attr( get_theme_mod( 'paropakar_volunteer_btn_name' ) ); ?></a>
+				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_volunteer_btn_link' ) ); ?>" class="volunteer"><?php echo esc_html( get_theme_mod( 'paropakar_volunteer_btn_name' ) ); ?></a>
 			<?php endif; ?>
 		</section>
 
@@ -145,13 +145,13 @@
 			$paropakar_donation_btn_name = get_theme_mod( 'paropakar_donation_btn_name' );
 			if ( ! empty( $paropakar_donation_btn_name ) ) :
 				?>
-				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_donation_btn_link' ) ); ?>" class="donate"><?php echo esc_attr( get_theme_mod( 'paropakar_donation_btn_name' ) ); ?></a>
+				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_donation_btn_link' ) ); ?>" class="donate"><?php echo esc_html( get_theme_mod( 'paropakar_donation_btn_name' ) ); ?></a>
 			<?php endif; ?>
 			<?php
 			$paropakar_volunteer_btn_name = get_theme_mod( 'paropakar_volunteer_btn_name' );
 			if ( ! empty( $paropakar_volunteer_btn_name ) ) :
 				?>
-				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_volunteer_btn_link' ) ); ?>" class="volunteer"><?php echo esc_attr( get_theme_mod( 'paropakar_volunteer_btn_name' ) ); ?></a>
+				<a href="<?php echo esc_url( get_theme_mod( 'paropakar_volunteer_btn_link' ) ); ?>" class="volunteer"><?php echo esc_html( get_theme_mod( 'paropakar_volunteer_btn_name' ) ); ?></a>
 			<?php endif; ?>
 		</section>
 	</div>

@@ -169,6 +169,171 @@ function paropakar_theme_customizer( $wp_customize ) {
 	endfor;
 
 	/**
+	 * Paropakar Event
+	 */
+
+	$wp_customize->add_section( 'paropakar_event_section',
+					array(
+							'title' => 'Event',
+							'priority' => 30,
+							'panel' => 'paropakar_theme_options'
+					)
+	);
+
+	$wp_customize->add_setting(
+		'paropakar_event_activation',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'paropakar_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'paropakar_event_control_activation',
+		array(
+			'label'    => __( 'Check to display Event section', 'paropakar' ),
+			'section'  => 'paropakar_event_section',
+			'settings' => 'paropakar_event_activation',
+			'type'     => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting('paropakar_event_setting_heading',
+					array(
+							'default' => '',
+							'sanitize_callback' => 'paropakar_sanitize_text'
+					)
+	);
+	$wp_customize->add_control(
+					'paropakar_event_heading',
+					array(
+							'type' => 'text',
+							'label' => __( 'Event Heading', 'paropakar' ),
+							'section' => 'paropakar_event_section',
+							'settings' => 'paropakar_event_setting_heading'
+					)
+	);
+
+	$wp_customize->add_setting('paropakar_event_setting_subheading',
+					array(
+							'default' => 'Event SubHeading',
+							'sanitize_callback' => 'paropakar_sanitize_text'
+					)
+	);
+	$wp_customize->add_control(
+					'paropakar_event_subheading',
+					array(
+							'type' => 'text',
+							'label' => __( 'Event Subheading', 'paropakar' ),
+							'section' => 'paropakar_event_section',
+							'settings' => 'paropakar_event_setting_subheading'
+					)
+	);
+
+	for( $count = 1; $count <= 3; $count++ ) :
+
+			$wp_customize->add_setting('paropakar_event_setting_' .$count,
+					array(
+							'default' => '',
+							'sanitize_callback' => 'absint'
+					)
+			);
+
+			$wp_customize->add_control(
+							'paropakar_event_' .$count,
+							array(
+									'type' => 'dropdown-pages',
+									'label' => __( 'Select A Page For Event', 'paropakar' ),
+									'section' => 'paropakar_event_section',
+									'settings' => 'paropakar_event_setting_' .$count
+							)
+			);
+
+	endfor;
+
+	/**
+	 * Paropakar Team
+	 */
+
+	$wp_customize->add_section( 'paropakar_team_section',
+					array(
+							'title' => __('Team', 'paropakar' ),
+							'priority' => 30,
+							'panel' => 'paropakar_theme_options'
+					)
+	);
+
+	$wp_customize->add_setting(
+		'paropakar_team_activation',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'paropakar_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'paropakar_team_control_activation',
+		array(
+			'label'    => __( 'Check to display Team section', 'paropakar' ),
+			'section'  => 'paropakar_team_section',
+			'settings' => 'paropakar_team_activation',
+			'type'     => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_setting('paropakar_team_setting_heading',
+					array(
+							'default' => '',
+							'sanitize_callback' => 'paropakar_sanitize_text'
+					)
+	);
+	$wp_customize->add_control(
+					'paropakar_team_heading',
+					array(
+							'type' => 'text',
+							'label' => __( 'Team Heading', 'paropakar' ),
+							'section' => 'paropakar_team_section',
+							'settings' => 'paropakar_team_setting_heading'
+					)
+	);
+
+	$wp_customize->add_setting('paropakar_team_setting_subheading',
+					array(
+							'default' => '',
+							'sanitize_callback' => 'paropakar_sanitize_text'
+					)
+	);
+	$wp_customize->add_control(
+					'paropakar_team_subheading',
+					array(
+							'type' => 'text',
+							'label' => __( 'Team Subheading', 'paropakar' ),
+							'section' => 'paropakar_team_section',
+							'settings' => 'paropakar_team_setting_subheading'
+					)
+	);
+
+	$wp_customize->add_setting('paropakar_team_setting_shortcode',
+					array(
+							'default' => '',
+							'sanitize_callback' => 'paropakar_sanitize_text'
+					)
+	);
+	$wp_customize->add_control(
+					'paropakar_team_shortcode',
+					array(
+							'type' => 'text',
+							'description' => 'e.g [wpteam id="47"]',
+							'label' => __( 'Team ShortCode', 'paropakar' ),
+							'section' => 'paropakar_team_section',
+							'settings' => 'paropakar_team_setting_shortcode'
+					)
+	);
+
+
+	/**
 	 * Paropakar Donation
 	 */
 
@@ -421,4 +586,8 @@ function paropakar_sanitize_file( $file, $setting ) {
 
 	// if file has a valid mime type return it, otherwise return default.
 	return ( $file_ext['ext'] ? $file : $setting->default );
+}
+
+function paropakar_sanitize_text( $text ) {
+    return sanitize_text_field( $text );
 }

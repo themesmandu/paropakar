@@ -32,7 +32,7 @@ endif;
 			<?php /* translators: %s: search term */ ?>
 			<h1 class="page-title"><?php printf( esc_html_e( 'Search Results for: %s', 'paropakar' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		<?php else : ?>
-			<h1 class="page-title"><?php esc_attr_e( 'Nothing Found', 'paropakar' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'paropakar' ); ?></h1>
 		<?php endif; ?>
 	</div>
 	<div class="row <?php echo esc_html( $paropakar_class ); ?>">

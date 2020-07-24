@@ -23,6 +23,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php
+	wp_body_open();
+	?>
 
 	<?php if ( has_nav_menu( 'top' ) ) : ?>
 		<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>

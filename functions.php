@@ -576,9 +576,9 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  */
 require get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 
-add_action( 'tgmpa_register', 'parooakar_register_required_plugins' );
+add_action( 'tgmpa_register', 'paropakar_register_required_plugins' );
 
-function parooakar_register_required_plugins() {
+function paropakar_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.

@@ -60,6 +60,10 @@ Paropakar theme bundles the following third-party resources:
 == License ==
 GPLv2 - https://www.gnu.org/licenses/gpl-2.0.html
 
+TGM-Plugin-Activation, Copyright (c) 2011, Thomas Griffin
+License: GPL-2.0
+Source: http://tgmpluginactivation.com/
+
 Bootstrap 4
 License: [MIT](https://opensource.org/licenses/MIT)
 Source: https://getbootstrap.com/

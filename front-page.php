@@ -103,7 +103,7 @@ $paropakar_services_mainpage = get_theme_mod( 'paropakar_services_page' );
             <div class="col-md-4">
                 <a>
                     <?php if ( has_post_thumbnail() ) : ?>
-                    <img src="<?php echo esc_url( get_the_post_thumbnail_url( null, 'paropakar-service-avatar' ) ); ?>"
+                    <img src="<?php echo esc_url( get_the_post_thumbnail_url() ); ?>"
                         alt="<?php the_title(); ?>" />
                     <?php endif; ?>
                     <p><?php the_excerpt(); ?></p>

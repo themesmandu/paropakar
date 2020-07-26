@@ -17,7 +17,7 @@ get_header(); ?>
 	$paropakar_sidebar_position = get_theme_mod( 'paropakar_sidebar_option' );
 	$paropakar_class            = '';
 	if ( is_active_sidebar( 'sidebar-1' ) ) :
-		if ( 'left' === $sidebar_position ) :
+		if ( 'left' === $paropakar_sidebar_position ) :
 			$paropakar_class = 'left-sidebar';
 		endif;
 	endif;
@@ -32,7 +32,7 @@ get_header(); ?>
 		</header><!-- .page-header -->
 	<?php endif; ?>
 	<div class="row <?php echo esc_html( $paropakar_class ); ?>">
-		<?php if ( ! is_active_sidebar( 'sidebar-1' ) || 'null' === $sidebar_position || empty( $paropakar_sidebar_position ) ) : ?>
+		<?php if ( ! is_active_sidebar( 'sidebar-1' ) || 'null' === $paropakar_sidebar_position || empty( $paropakar_sidebar_position ) ) : ?>
 			<div id="archive-col" class="col-lg-12 single-col">
 		<?php else : ?>
 			<div id="archive-col" class="col-lg-8 single-col">
@@ -74,7 +74,7 @@ get_header(); ?>
 			</div><!-- #main -->
 		</div><!-- #archive-col -->
 		<?php
-		if ( 'left' === $sidebar_position || 'right' === $sidebar_position ) :
+		if ( 'left' === $paropakar_sidebar_position || 'right' === $paropakar_sidebar_position ) :
 			get_sidebar();
 		endif;
 		?>

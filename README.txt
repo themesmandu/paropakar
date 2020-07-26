@@ -118,4 +118,6 @@ Initial Release
 
 == Upgrade Notice ==
 = 1.0.8 =
-Added New Section in Front Page
+Added Events 
+Added Team
+

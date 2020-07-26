@@ -14,7 +14,7 @@
 
 get_header(); ?>
 <?php
-if ( get_theme_mod( 'paropakar_slider_activation' ) === '1' ) :
+if ( get_theme_mod( 'paropakar_slider_activation' ) == 1 ) :
 	$paropakar_slider_pages = paropakar_get_pages( 'paropakar_header_slider_' );
 	if ( $paropakar_slider_pages ) :
 		$paropakar_page_query = new WP_Query(

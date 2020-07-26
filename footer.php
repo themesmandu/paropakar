@@ -89,7 +89,7 @@
 				<?php
 				get_template_part( 'template-parts/footer/site', 'info' );
 
-				if ( get_theme_mod( 'paropakar_to_the_top' ) === '1' ) :
+				if ( get_theme_mod( 'paropakar_to_the_top' ) == 1 ) :
 					?>
 					<button id="up-btn" title="Go to top" style="display: block;">&uarr;</button>
 					<?php endif; ?>

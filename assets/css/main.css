@@ -619,13 +619,25 @@ section h2{
 	padding: 100px 0 0;
 }
 
-.section-our-team .name,
+.section-our-team .heading-wrap {
+	margin-bottom: 50px;
+}
+
+.section-our-team h2,
 .section-events h3 {
 	font-family: opensans-bold;
     color: #000;
     font-size: 24px;
     margin-bottom: 15px;
     transition: .5s;
+}
+
+.section-our-team .sptp-row {
+	margin: 0;
+}
+
+.section-our-team .sptp-section-title {
+	display: none !important;
 }
 
 .section-our-team .post,
@@ -656,7 +668,7 @@ section h2{
 	border-radius: 3px;
 }
 
-.section-our-team .social-links a {
+.section-our-team a i {
 	color: #ffffff;
 }
 
@@ -665,6 +677,7 @@ section h2{
 .section-events h3 a {
 	color: #000000;
 }
+
 
 /* -- footer css -- */
 

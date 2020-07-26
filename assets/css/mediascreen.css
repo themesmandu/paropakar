@@ -253,6 +253,10 @@
 	.section-six{
 		margin: 34px 0;
 	}
+
+	.section-our-team, .section-events {
+		padding: 32px 0;
+	}
 	#content section:last-child{
 		margin-bottom: 34px;
 	}

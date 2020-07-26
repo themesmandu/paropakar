@@ -177,13 +177,13 @@ endif;
             $paropakar_team_heading = get_theme_mod( 'paropakar_team_setting_heading' );
             $paropakar_team_subheading = get_theme_mod( 'paropakar_team_setting_subheading' );
         ?>
-        <h1><?php echo esc_html( $paropakar_team_heading ); ?></h1>
-        <h2><?php echo esc_html( $paropakar_team_subheading ); ?></h2>
-
-        <div class="row">
-            <?php $paropakar_team_shortcode = get_theme_mod( 'paropakar_team_setting_shortcode' ); ?>
-            <?php echo do_shortcode( $paropakar_team_shortcode ); ?>
+        <div class="heading-wrap">
+            <h1><?php echo esc_html( $paropakar_team_heading ); ?></h1>
+            <h2><?php echo esc_html( $paropakar_team_subheading ); ?></h2>
         </div>
+
+        <?php $paropakar_team_shortcode = get_theme_mod( 'paropakar_team_setting_shortcode' ); ?>
+        <?php echo do_shortcode( $paropakar_team_shortcode ); ?>
     </div>
 </section>
 <?php endif;

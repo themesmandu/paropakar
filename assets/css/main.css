@@ -683,7 +683,11 @@ section h2{
 }
 
 .section-events h3 a {
+	font-family: opensans-bold;
 	color: #000000;
+	font-size: 24px;
+	margin-bottom: 32px;
+	transition: .5s;
 }
 
 .section-events figure {

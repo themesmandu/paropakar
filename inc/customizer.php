@@ -231,27 +231,6 @@ function paropakar_theme_customizer( $wp_customize ) {
 					)
 	);
 
-	for( $count = 1; $count <= 3; $count++ ) :
-
-			$wp_customize->add_setting('paropakar_event_setting_' .$count,
-					array(
-							'default' => '',
-							'sanitize_callback' => 'absint'
-					)
-			);
-
-			$wp_customize->add_control(
-							'paropakar_event_' .$count,
-							array(
-									'type' => 'dropdown-pages',
-									'label' => __( 'Select A Page For Event', 'paropakar' ),
-									'section' => 'paropakar_event_section',
-									'settings' => 'paropakar_event_setting_' .$count
-							)
-			);
-
-	endfor;
-
 	/**
 	 * Paropakar Team
 	 */

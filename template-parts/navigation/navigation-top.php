@@ -19,7 +19,7 @@
 				the_custom_logo();
 			else :
 				?>
-				<a class="navbar-brand" href = '<?php echo esc_url( get_site_url() ); ?>' ><?php echo bloginfo( 'name' ); ?></a>
+				<a class="navbar-brand" href = '<?php echo esc_url(  home_url() ); ?>' ><?php echo bloginfo( 'name' ); ?></a>
 				<?php
 			endif;
 		endif;

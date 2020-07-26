@@ -590,6 +590,12 @@ function paropakar_register_required_plugins() {
 			'slug'      => 'team-free',
 			'required'  => false,
 		),
+                
+                array(
+			'name'      => 'The Events Calendar',
+			'slug'      => 'the-events-calendar',
+			'required'  => false,
+		),
 
 		// <snip />
 	);

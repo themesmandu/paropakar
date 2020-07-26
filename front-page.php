@@ -34,7 +34,7 @@ if ( get_theme_mod( 'paropakar_slider_activation' ) == 1 ) :
         <div
             class="carousel-item carousel-item-<?php echo esc_attr( $paropakar_count ); ?> <?php echo ( $paropakar_count === 0 ) ? 'active' : ''; ?>">
             <div class="image_slider_image">
-                <img src="<?php echo esc_url( get_the_post_thumbnail_url( null, 'paropakar-featured-image' ) ); ?>"
+                <img src="<?php echo esc_url( get_the_post_thumbnail_url()); ?>"
                     alt="<?php the_title(); ?>">
             </div>
             <div class="carousel-caption">

@@ -193,15 +193,17 @@ endif;
 */
 
 if ( get_theme_mod( 'paropakar_event_activation' ) == 1 ) : ?>
-    <section class="section-events">
-        <div class="container">
-            <?php
+<section class="section-events">
+    <div class="container">
+        <?php
                 $paropakar_event_heading = get_theme_mod( 'paropakar_event_setting_heading' );
                 $paropakar_event_subheading = get_theme_mod( 'paropakar_event_setting_subheading' );
             ?>
+        <div class="heading-wrap">
             <h1><?php echo esc_html( $paropakar_event_heading ); ?></h1>
             <h2><?php echo esc_html( $paropakar_event_subheading ); ?></h2>
-            <?php
+        </div>
+        <?php
                 $paropakar_event_query = new WP_Query(
                            array(
                                'post_type'   => 'tribe_events',
@@ -209,24 +211,24 @@ if ( get_theme_mod( 'paropakar_event_activation' ) == 1 ) : ?>
                                'posts_per_page' => '3',
                            ));
             ?>
-            <div class="row">
-                <?php
+        <div class="row">
+            <?php
                 while( $paropakar_event_query->have_posts() ):
                     $paropakar_event_query->the_post(); ?>
-                    <div class="col-md-4">
-                        <figure>
-                            <?php if( has_post_thumbnail() ): ?>
-                            <img src="<?php echo esc_url( get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
-                            <?php endif; ?>
-                        </figure>
-                        <h3 class="name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <p><?php the_excerpt(); ?></p>
-                    </div>
-                <?php endwhile;
-                wp_reset_postdata(); ?>
+            <div class="col-md-4">
+                <figure>
+                    <?php if( has_post_thumbnail() ): ?>
+                    <img src="<?php echo esc_url( get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
+                    <?php endif; ?>
+                </figure>
+                <h3 class="name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <p><?php the_excerpt(); ?></p>
             </div>
+            <?php endwhile;
+                wp_reset_postdata(); ?>
         </div>
-    </section>
+    </div>
+</section>
 <?php endif;
 
 

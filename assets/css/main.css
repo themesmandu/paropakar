@@ -613,22 +613,21 @@ section h2{
 
 /* -- Section Our Team Styles -- */
 
-.section-our-team,
-.section-events {
+.section-our-team {
 	text-align: center;
 	padding: 100px 0 0;
 }
 
-.section-our-team .heading-wrap {
+.section-our-team .heading-wrap,
+.section-events .heading-wrap{
 	margin-bottom: 50px;
 }
 
 .section-our-team h2,
-.section-events h3 {
-	font-family: opensans-bold;
-    color: #000;
-    font-size: 24px;
-    margin-bottom: 15px;
+.section-events h2 {
+    color: #000000;
+    font-size: 22px;
+    margin-bottom: 0;
     transition: .5s;
 }
 
@@ -642,8 +641,8 @@ section h2{
 
 .section-our-team .post,
 .section-events p {
-	font-size: 16px;
-	color: #000;
+	font-size: 15px;
+	color: #777777;
 }
 
 .section-our-team .social-links {
@@ -673,6 +672,15 @@ section h2{
 }
 
 /* -- Section Events Styles -- */
+
+.section-events {
+	padding: 100px 0 0;
+}
+
+.section-events h1,
+.section-events h2 {
+	text-align: center;
+}
 
 .section-events h3 a {
 	color: #000000;

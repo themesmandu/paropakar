@@ -215,7 +215,7 @@ if ( get_theme_mod( 'paropakar_event_activation' ) == 1 ) : ?>
             <?php
                 while( $paropakar_event_query->have_posts() ):
                     $paropakar_event_query->the_post(); ?>
-            <div class="col-md-4">
+            <div class="col-md-4 column">
                 <figure>
                     <?php if( has_post_thumbnail() ): ?>
                     <img src="<?php echo esc_url( get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
